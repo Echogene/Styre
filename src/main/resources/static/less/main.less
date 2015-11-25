@@ -8,3 +8,33 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+.table {
+	@header-color: #ccc;
+	@dark-color: #ddd;
+	@light-color: #eee;
+
+	div& {
+		width: 100%;
+		display: table;
+	}
+	>div.row {
+		width: 100%;
+		display: table-row;
+
+		&:nth-of-type(even) {
+			background-color: @dark-color;
+		}
+		&:nth-of-type(odd) {
+			background-color: @light-color;
+		}
+		&.header {
+			background-color: @header-color;
+		}
+
+		>span {
+			display: table-cell;
+			padding: .5em;
+		}
+	}
+}
