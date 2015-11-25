@@ -20,7 +20,7 @@ html {
 				div(class: 'row') {
 					span(task.name)
 					span(task.deadline)
-					span("${formatPercentage(task.completion)}%", style: "background-image: linear-gradient(to right, #afa 0, #afa ${formatPercentage(task.completion)}%, transparent ${formatPercentage(task.completion)}%);")
+					span("${formatPercentage(task.completion)}%", style: "background-image: linear-gradient(to right, #8f6 0, #af8 ${formatPercentage(task.completion)}%, transparent ${formatPercentage(task.completion)}%, transparent 100%);")
 					span("${formatTime(task.timeSpent)}")
 					span("${formatTime(task.timeRemaining)}")
 				}

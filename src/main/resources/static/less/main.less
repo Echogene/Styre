@@ -13,6 +13,8 @@ body {
 	@header-color: #ccc;
 	@dark-color: #ddd;
 	@light-color: #eee;
+	@dark-border: #888;
+	@light-border: #bbb;
 
 	div& {
 		width: 100%;
@@ -22,6 +24,7 @@ body {
 		width: 100%;
 		display: table-row;
 
+
 		&:nth-of-type(even) {
 			background-color: @dark-color;
 		}
@@ -30,11 +33,19 @@ body {
 		}
 		&.header {
 			background-color: @header-color;
+			>span {
+				border-bottom: 1px solid @dark-border;
+			}
 		}
 
 		>span {
 			display: table-cell;
 			padding: .5em;
+			border-bottom: 1px solid @light-border;
+
+			&:not(:last-child) {
+				border-right: 1px solid @dark-border;
+			}
 		}
 	}
 }
