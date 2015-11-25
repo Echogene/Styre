@@ -15,7 +15,7 @@ public class Formatting {
 
 	public static String formatPercentage(Object o) {
 		double d = getDoubleFromObject(o);
-		return new DecimalFormat("#.##").format(100.0 * d);
+		return new DecimalFormat("#.###").format(100.0 * d);
 	}
 
 	public static String formatTime(Object o) {
